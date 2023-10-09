@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Column Layout with Sections</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: DarkGreen;
+            color: Gold;
+            padding: 20px;
+            text-align: center;
+	    border: 5px outset oldlace
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .column {
+            flex-basis: calc(45% - 10px); /* 50% width with a little space in between */
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .left-column {
+            flex-basis: calc(45% - 10px); /* 50% width with a little space in between */
+            background-color: #e0e0e0;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inflation</h1>
+    </header>
+    <div class="container">
+        <div class="column">
+            <div class="section">
+                <h2>Visualization 1</h2>
+            	<p>Here we will display a line graph that shows inflation over time.</p>
+            </div>
+            <div class="section">
+                <h2>Visualization 2</h2>
+            	<p>Here we will display a map view of percent change in inflation over the past year</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="section">
+                <h2>Visualization 3</h2>
+            <p>Here we will provide a group of splitters for years, products, and regions. If someone splits on a year the map will update to display the percent change from the year before to that year. The line graph will also only focus on that year for all prodects or the products selected. If someone splits on region, the map will highlight the region selected, and the line chart will update. If someone splits on product, hopefully we will have an updating picture to show the user what product they are currently viewing</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
