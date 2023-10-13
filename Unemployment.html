@@ -29,6 +29,11 @@
             flex-basis: calc(33.33% - 10px); /* 33.33% width with a little space in between */
             background-color: #f0f0f0;
         }
+	
+	.secondcolumn{
+	    flex-basis: calc(50% - 10px); /* 33.33% width with a little space in between */
+            background-color: #f0f0f0;
+	}
     </style>
 </head>
 <body>
@@ -38,15 +43,25 @@
     <div class="container">
         <div class="column">
             <h2>Left Column</h2>
-            <p>This is the content for the left column.</p>
+            <p>On this section, I will insert a map of the united states, with clickable states. When someone clicks on a state, that state will apear in the center column (to the right). Each state will be colored on a gradient based on how high their unemployment rate is (lighter color is low unemployment and darker color is high unemployment).</p>
         </div>
         <div class="column">
             <h2>Center Column</h2>
-            <p>This is the content for the center column.</p>
+            <p>This column will appear blank with a prompt that says choose a state when the site is first opened. When a user clicks a state on the display to the left, that state will appear in this column. Similar to the display on the left, this visualization will display the various counties on a color gradient. When someone clicks a county, that county's name will appear on the right hand visual.  </p>
         </div>
         <div class="column">
             <h2>Right Column</h2>
-            <p>This is the content for the right column.</p>
+            <p>This column will appear blank with a prompt that says choose a county when the site is first opened. When the user clicks a county on the center display, the name of that county will appear on this visualization. There will be some setting modifiers here for the user to click. One will be a toggle for multiple selection that will allow for the user to select multiple counties. If multiple counties are selected, both will appear in a list on the right hand visual. Another potential option will be an aggregate measure toggle switch. This toggle will take all variables in the list that the user selects, and aggregates them into a single group (for the first visual in the second row). </p>
+        </div>
+    </div>
+    <div class = "container">
+	<div class="secondcolumn">
+            <h2>Left Column</h2>
+            <p>Here we will display a line graph for unemployment rates for the past ten years (at least). When the screen is first opened, the data will display the change in unemployment rate for the United States as a whole. Once a state is selected, a similar line for unemployment will show up for that state, and likewise for county (or counties). We will have a toggle switch here that will allow the user to get rid of the US and state line but not the county line. If the user has aggregated anything in the above maps, the respective lines will aggregate here as well.</p>
+        </div>
+        <div class="secondcolumn">
+            <h2>Right Column</h2>
+            <p>Here we will display a line graph for percent change in unemployment rates in the past ten years. This visualization will act similarly to the other line graphs on this page. The lines for state and county will show up when necessary, and aggregation is possible. </p>
         </div>
     </div>
 </body>
