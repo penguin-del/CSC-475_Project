@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employment and Wage Dashboard</title>
+    <title>Three-Column Layout</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,62 +31,35 @@
         }
 	
 	.secondcolumn{
-	    flex-basis: calc(50% - 10px); /* 33.33% width with a little space in between */
+	    flex-basis: calc(45% - 10px); /* 33.33% width with a little space in between */
             background-color: #f0f0f0;
 	}
-	.centered-text {
-    		text-align: center;
-  	}
     </style>
 </head>
 <body>
-    <header>
-        <h1>Employment and Wages</h1>
-    </header>
+    <header><h1> Employment</h1></header>
+    <h2> Select a Year </h2>
     <div class = "container">
-	<p class = "centered-text"> Drop down menu for a user to select an industry
+	    <h2><a href="Employment_2023.html">2023</a></h2>
+            <h2><a href="Employment_2022.html">2022</a></h2>
+	    <h2><a href="Employment_2021.html">2021</a></h2>
+	    <h2><a href="Employment_2020.html">2020</a></h2>
+	    <h2><a href="Employment_2019.html">2019</a></h2>
+	    <h2><a href="Employment_2018.html">2018</a></h2>
+	    <h2><a href="Employment_2017.html">2017</a></h2>
+	    <h2><a href="Employment_2016.html">2016</a></h2>
+	    <h2><a href="Employment_2015.html">2015</a></h2>
+	    <h2><a href="Employment_2014.html">2014</a></h2>
+	    <h2><a href="Employment_2013.html">2013</a></h2>
+	    <h2><a href="Employment_2012.html">2012</a></h2>
+	    <h2><a href="Employment_2011.html">2011</a></h2>
+	    <h2><a href="Employment_2010.html">2010</a></h2>
+	    <h2><a href="Employment_2009.html">2009</a></h2>
+	    <h2><a href="Employment_2008.html">2008</a></h2>
+	    <h2><a href="Employment_2007.html">2007</a></h2>
+	    <h2><a href="Employment_2006.html">2006</a></h2>
+	    <h2><a href="Employment_2005.html">2005</a></h2>
     </div>
-    <div class="container">
-        <div class="column">
-            <h2>Map Visual 1</h2>
-            <p>This section will contain a map of the United States with states you can click on. When a state is selected, it will appear in the center column of this row. The colors of each state will follow a gradient depending on how prevelant the chosen industy is for that state. </p>
-        </div>
-        <div class="column">
-            <h2>Map Visual 2</h2>
-            <p>This section will contain a map of the chosen state with counties colored in the scheme noted in the left hand column. The user can click on each county so that the county name will appear in the visualization in the right column of this row.</p>
-        </div>
-        <div class="column">
-            <h2>County List and Splitter</h2>
-            <p>This section will contain a list of chosen counties and some settings management tools. For example, there will be a multiple selection toggle switch, which will allow the user to select multiple counties to look at. There will also be an option to aggregate selected counties into one group. These toggles will change the displays of the visualizations below.</p>
-        </div>
-    </div>
-    <h1>Wages</h1>
-    <div class="container">
-        <div class="secondcolumn">
-            <h2>Left Column</h2>
-            <p>This visualization will show the average wage for an industry and state over the last twenty years. </p>
-        </div>
-        <div class="secondcolumn">
-            <h2>Right Column</h2>
-            <p>This visualization will be a line graph displaying the change in average wages over the last ten years.</p>
-        </div>
-    </div>
-    <h1 text-align: center;>Employment</h1>
-    <div class = "container">
-	<div class="column">
-            <h2>Center Column</h2>
-            <p>This visualization will be a line graph for the number of people employed by a selected industry.</p>
-        </div>
-	<div class="column">
-            <h2>Center Column</h2>
-            <p>This visualization will either be a pie chart or a bar graph for the percent of employment in each industry for a selected year. </p>
-        </div>
-	<div class="column">
-            <h2>Center Column</h2>
-            <p>This visualization will be a line graph for the percent change in number of people employed by a selected industry </p>
-        </div>
-    </div>
-
 </body>
 </html>
 
