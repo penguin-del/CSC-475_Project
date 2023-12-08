@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 """
 @name: import.py
-@desc: this file imports a JSON library to import data from the Bureau of Labor Statistics API
+@desc: This file imports a JSON library to import data from the Bureau of Labor Statistics API
 @date: October 3rd, 2023
 @author: Joshua Hutson
 """
-<<<<<<< HEAD
-<<<<<<< HEAD
     
 import pandas as pd
 import requests
@@ -105,7 +103,7 @@ df.to_csv("all_data_inflation.csv")
 
 # Read the county code Excel file into a DataFrame
 file_path = 'County_Codes.xlsx'
-county_data = pd.read_excel(file_path, sheet_name= "Sixth 500", converters={'Code': lambda x: f"{x:05}"})
+county_data = pd.read_excel(file_path, sheet_name= "States", converters={'Code': lambda x: f"{x:05}"})
 
 # Convert the 'Code' column to a list
 code_list = county_data['Code'].tolist()
@@ -164,7 +162,7 @@ for county in code_list:
     # Export all of the data to a csv file for the county
     temp = pd.DataFrame(results)
     temp.columns = ['seriesID', 'year', 'period', 'value', 'One Month Percent Change', 'Three Month Percent Change', 'Nine Month Percent Change', 'Twelve Month Percent Chagne']    
-    temp.to_csv("all_data_employment_%s.csv" % county)
+    temp.to_csv("all_data_employment_retry_%s.csv" % county)
 
 
 ############################################################################
@@ -173,7 +171,7 @@ for county in code_list:
 
 
 # Read the county codes again and make a list out of them
-county_data = pd.read_excel(file_path, converters={'Code': lambda x: f"{x:05}"})
+county_data = pd.read_excel(file_path, sheet_name= "States", converters={'Code': lambda x: f"{x:05}"})
 code_list = county_data['Code'].tolist()
 
 data_type_list = ['3', '6'] #3 is for the unemployment rate and 6 is for the labor force size
@@ -187,7 +185,7 @@ for county in code_list:
     # Only place 50 tables in each query
     if len(series_list) <= 48:
         for dtype in data_type_list:
-            series_list.append('LAUCN'+ county + '000000000' + dtype)
+            series_list.append('LAUST'+ county + '000000000' + dtype)
             
     #When we have 50 tables, query the database
     else:
@@ -229,18 +227,10 @@ for county in code_list:
         # Export the data to a csv file
         temp = pd.DataFrame(results)
         temp.columns = ['seriesID', 'year', 'month', 'value', 'One Month Percent Change', 'Three Month Percent Change', 'Nine Month Percent Change', 'Twelve Month Percent Chagne']     
-        temp.to_csv("all_data_unemployment_%s.csv" % marker)
+        temp.to_csv("all_data_unemployment_retry_%s.csv" % marker)
         
         #Ensure that we empty the series list and add the series associated with this iteration
         series_list = []
         for dtype in data_type_list:
             series_list.append('LAUCN'+ county + '000000000' + dtype)
-    
 
-
-=======
-
->>>>>>> parent of b00b8e2 (First skeleton outline for the Dashboard Website)
-=======
-
->>>>>>> parent of b00b8e2 (First skeleton outline for the Dashboard Website)
